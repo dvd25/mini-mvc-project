@@ -1,0 +1,64 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "My User Project CRUD",
+        "description": "My User Project Application API",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "Covid 19 Data API Backend",
+            "description": "Expressjs backend service with API services. "
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/api/getCountry": {
+            "get": {
+                "tags": [
+                    "Fetches a country"
+                ],
+                "summary": "Fetches for a country from covid19api for all kinds of COVID-related information",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "Enter country name"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "This service allows you to fetch COVID19 data for a country and recieve json data."
+                    }
+                }
+            }
+        },
+        "/api/getAllCountries": {
+            "get": {
+                "tags": [
+                    "Fetches COVID19API for all countries"
+                ],
+                "summary": "Fetches for a json object of all countries from covid19api",
+                "responses": {
+                    "200": {
+                        "description": "This service allows you to fetch a json object of all countries from covid19api."
+                    }
+                }
+            }
+        }
+    }
+}
